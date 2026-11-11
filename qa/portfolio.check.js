@@ -109,6 +109,20 @@ async function runAxe(page, label) {
   check('proof screenshot opens and closes in the lightbox', opened && closed);
   await page.screenshot({ path: path.join(OUT, 'desktop.png'), fullPage: false });
 
+  // ---------------- Course carousel ----------------
+  const cardCount = await page.$$eval('#courses .cs-card', c => c.length);
+  const activeTitle = () => page.$eval('#courses .cs-card.is-active h3', e => e.textContent);
+  const first = await activeTitle();
+  await page.click('#courses .cs-next');
+  const second = await activeTitle();
+  await page.click('#courses .cs-prev');
+  const back = await activeTitle();
+  check('course carousel has 4 cards and the arrows change the card', cardCount === 4 && second !== first && back === first, `${cardCount} cards`);
+  const hiddenReachable = await page.$$eval('#courses .cs-card[aria-hidden="true"]', cs => cs.filter(c => !c.inert).length);
+  check('hidden course cards are not reachable by keyboard', hiddenReachable === 0);
+  await page.click('#courses .cs-pause');
+  check('course carousel can be paused', (await page.getAttribute('#courses .cs-pause', 'aria-label')) === 'Play automatic slide changes');
+
   // ---------------- Contact form ----------------
   await page.locator('#contact').scrollIntoViewIfNeeded();
   await page.click('#sendBtn');
@@ -175,6 +189,10 @@ async function runAxe(page, label) {
   await page.goto(BASE, { waitUntil: 'networkidle' });
   const hidden = await page.evaluate(() => [...document.querySelectorAll('.rv')].filter(e => getComputedStyle(e).opacity === '0').length);
   check('reduced-motion users see all content immediately', hidden === 0, `${hidden} hidden`);
+  const startCard = await page.$eval('#courses .cs-card.is-active', e => e.getAttribute('aria-label'));
+  await page.waitForTimeout(5200);
+  const laterCard = await page.$eval('#courses .cs-card.is-active', e => e.getAttribute('aria-label'));
+  check('reduced-motion users get no automatic slide changes', startCard === laterCard);
   await context.close();
 
   await browser.close();
