@@ -1,270 +1,471 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Shihab Hossain — Portfolio</title>
-  <meta name="description" content="Shihab Hossain — CSE student, Python developer and aspiring AI Engineer from Chattogram, Bangladesh.">
-  <meta property="og:title" content="Shihab Hossain — Portfolio">
-  <meta property="og:description" content="Python developer and aspiring AI Engineer. Projects in machine learning, Django and IoT.">
-  <meta property="og:image" content="assets/profile.jpg">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%23050507'/><circle cx='32' cy='32' r='18' fill='%232b4dff'/><text x='32' y='40' font-family='Arial' font-weight='900' font-size='22' fill='white' text-anchor='middle'>SH</text></svg>">
+  <title>Shihab Hossain — Aspiring SQA Engineer</title>
+  <meta name="description" content="Shihab Hossain is an aspiring Software Quality Assurance engineer: manual and API testing, Playwright automation, Postman/Newman and clear bug reports, backed by a Python/Django development background.">
+  <link rel="canonical" href="https://shihab-portfolio-frontend.vercel.app/">
+  <meta name="theme-color" content="#0F172A">
+  <meta name="color-scheme" content="dark">
+
+  <!-- Social sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Shihab Hossain">
+  <meta property="og:title" content="Shihab Hossain — Aspiring SQA Engineer">
+  <meta property="og:description" content="QA case studies: 57 test cases, 8 defects found and fixed, 71 automated tests (DiagnoCare) · Playwright and Postman/Newman automation.">
+  <meta property="og:url" content="https://shihab-portfolio-frontend.vercel.app/">
+  <meta property="og:image" content="https://shihab-portfolio-frontend.vercel.app/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Shihab Hossain — Aspiring Software QA Engineer">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Shihab Hossain — Aspiring SQA Engineer">
+  <meta name="twitter:description" content="Manual and API testing, Playwright automation, Postman/Newman and clear bug reports.">
+  <meta name="twitter:image" content="https://shihab-portfolio-frontend.vercel.app/assets/og-image.png">
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap">
   <link rel="stylesheet" href="style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Shihab Hossain",
+    "jobTitle": "Aspiring Software QA Engineer",
+    "url": "https://shihab-portfolio-frontend.vercel.app/",
+    "email": "mailto:hossainshihab2001@gmail.com",
+    "address": { "@type": "PostalAddress", "addressLocality": "Chattogram", "addressCountry": "BD" },
+    "affiliation": { "@type": "CollegeOrUniversity", "name": "Port City International University" },
+    "sameAs": ["https://github.com/shihab-hossain1", "https://www.linkedin.com/in/shihab-hossain3/"]
+  }
+  </script>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to main content</a>
 
-<header class="nav" id="nav">
-  <a href="#home" class="brand">SH<sup>°</sup></a>
-  <nav class="links" id="links">
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#journey">Journey</a>
-    <a href="#contact" class="pill">Contact</a>
-  </nav>
-  <button class="burger" id="burger" aria-label="Open menu"><span></span><span></span></button>
+<header class="site-header" id="top">
+  <div class="container header-inner">
+    <a class="brand" href="#main" aria-label="Shihab Hossain, back to top">Shihab Hossain</a>
+    <button type="button" class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="siteNav">
+      <span class="menu-toggle-bars" aria-hidden="true"></span><span class="menu-toggle-label">Menu</span>
+    </button>
+    <nav id="siteNav" class="site-nav" aria-label="Primary">
+      <ul>
+        <li><a href="#work">QA case studies</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact" class="nav-cta">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
 
-<!-- ============ HERO ============ -->
-<section class="slide hero" id="home">
-  <div class="blob drift" style="width:62vw;height:34vw;min-width:420px;min-height:260px;left:20%;top:24%"></div>
-  <svg class="ribbon" viewBox="0 0 1200 700" preserveAspectRatio="none">
-    <defs><linearGradient id="rg" x1="0" x2="1"><stop offset="0" stop-color="#2b4dff" stop-opacity="0"/><stop offset=".5" stop-color="#3a5cff" stop-opacity=".55"/><stop offset="1" stop-color="#7b4dff" stop-opacity="0"/></linearGradient></defs>
-    <path d="M-50 520 C 250 380, 420 640, 700 470 S 1100 300, 1260 380" stroke="url(#rg)" stroke-width="60" fill="none" stroke-linecap="round"/>
-  </svg>
-  <div class="hero-inner">
-    <p class="eyebrow rv">Python Developer · Aspiring AI Engineer</p>
-    <h1 class="wide rv d1">Portfolio<sup>°</sup></h1>
-    <p class="hero-sub rv d2">I'm <b>Shihab Hossain</b> — a CSE student building machine-learning systems, web apps and things that think.</p>
-    <div class="hero-cta rv d3">
-      <a href="#projects" class="btn primary">See my work</a>
-      <a href="#contact" class="btn ghost">Get in touch ↗</a>
+<main id="main" tabindex="-1">
+
+<!-- ================= HERO ================= -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow">Software Quality Assurance</p>
+      <h1 id="hero-title">Shihab Hossain</h1>
+      <p class="hero-role">Aspiring SQA Engineer — seeking SQA internships and junior QA roles</p>
+      <p class="hero-lead">
+        I design test cases, test APIs with Postman and Newman, automate user journeys with Playwright,
+        and write bug reports developers can reproduce. I started as a Python/Django developer, so I test
+        with an understanding of how the code underneath actually works.
+      </p>
+      <ul class="hero-actions">
+        <li><a class="btn btn-primary" href="#work">View QA case studies</a></li>
+        <li><a class="btn btn-secondary" id="cvLink" href="assets/Shihab-Hossain-CV.pdf" download hidden>Download CV <span aria-hidden="true">↓</span></a></li>
+        <li><a class="btn btn-ghost" href="https://github.com/shihab-hossain1" target="_blank" rel="noopener">GitHub<span class="sr-only"> (opens in a new tab)</span></a></li>
+        <li><a class="btn btn-ghost" href="https://www.linkedin.com/in/shihab-hossain3/" target="_blank" rel="noopener">LinkedIn<span class="sr-only"> (opens in a new tab)</span></a></li>
+      </ul>
+    </div>
+
+    <div class="evidence">
+      <h2 id="evidence-title" class="evidence-title">Evidence, not adjectives</h2>
+      <p class="evidence-sub">From my DiagnoCare QA case study</p>
+      <dl class="evidence-list">
+        <div><dt>Test cases written</dt><dd>57</dd></div>
+        <div><dt>Defects found &amp; fixed</dt><dd>8 <small>3 security</small></dd></div>
+        <div><dt>Automated tests</dt><dd>71 <small>all passing</small></dd></div>
+      </dl>
+      <p class="evidence-note">Counts checked against the public repository. The 71 Django tests were re-run on 22&nbsp;Oct&nbsp;2026: 71 passed, 0 failed.</p>
     </div>
   </div>
-  <div class="scrollcue"><i></i>Scroll</div>
-  <div class="foot"><span>Chattogram, Bangladesh</span><span>Open to internships</span></div>
 </section>
 
-<!-- ============ ABOUT ============ -->
-<section class="slide about" id="about">
-  <div class="blob" style="width:40vw;height:40vw;left:-10vw;bottom:-14vw;opacity:.55"></div>
-  <div class="about-grid">
-    <div class="who">
-      <div class="hello rv">Hello, I am</div>
-      <h2 class="rv d1">Shihab Hossain</h2>
-      <div class="photo rv d2"><img src="assets/profile-cutout.webp" alt="Portrait of Shihab Hossain" loading="lazy"></div>
-    </div>
-    <div class="info">
-      <div class="span2 rv d1">
-        <h3>About Me</h3>
-        <p>Detail-oriented Computer Science and Engineering student with solid experience in Python, C++, machine learning, data structures and algorithmic thinking. I build AI/ML projects and I'm currently exploring NLP. Research-oriented, I aspire to become an AI Engineer — combining strong fundamentals with practical system development. I'm looking for an internship or junior role where I can contribute to real software projects.</p>
-      </div>
-      <div class="rv d2">
-        <h3>Education</h3>
-        <ul class="tl">
-          <li><b>2022 – Present</b>B.Sc in CSE, Port City International University — <em>CGPA 3.88</em></li>
-          <li><b>2021</b>HSC, Hazera Taju Degree College — <em>GPA 5.00</em></li>
-          <li><b>2019</b>SSC, Nasirabad Govt. High School — <em>GPA 5.00</em></li>
+<!-- ================= QA CASE STUDIES ================= -->
+<section id="work" class="section" aria-labelledby="work-title">
+  <div class="container">
+    <header class="section-head">
+      <p class="eyebrow">Selected QA work</p>
+      <h2 id="work-title">QA case studies</h2>
+      <p class="section-intro">Two projects that show how I test: one where I found and fixed real defects in an application I built, and one focused on UI and API automation.</p>
+    </header>
+
+    <!-- ===== Case study 01: DiagnoCare ===== -->
+    <article class="case" id="diagnocare" aria-labelledby="cs1-title">
+      <div class="case-meta">
+        <p class="case-num">Case study 01</p>
+        <h3 id="cs1-title">DiagnoCare 2.0 — testing a Django booking app</h3>
+        <p class="case-summary">A diagnostic-test booking system I built, then tested as a QA engineer: patients book tests, centres manage bookings and upload PDF reports, admins oversee everything.</p>
+        <ul class="tag-list">
+          <li>Manual testing</li><li>Access-control testing</li><li>Django test framework</li><li>Python</li><li>SQLite</li>
+        </ul>
+        <ul class="link-list">
+          <li><a href="https://github.com/shihab-hossain1/DiagnoCare_2.0" target="_blank" rel="noopener">Repository<span class="sr-only"> (opens in a new tab)</span> ↗</a></li>
+          <li><a href="https://github.com/shihab-hossain1/DiagnoCare_2.0/blob/master/docs/test-cases.md" target="_blank" rel="noopener">All 57 test cases<span class="sr-only"> (opens in a new tab)</span> ↗</a></li>
+          <li><a href="https://github.com/shihab-hossain1/DiagnoCare_2.0/issues?q=is%3Aissue" target="_blank" rel="noopener">Bug reports (GitHub Issues)<span class="sr-only"> (opens in a new tab)</span> ↗</a></li>
         </ul>
       </div>
-      <div class="rv d2">
-        <h3>Languages</h3>
-        <ul class="lang">
-          <li><span>Bangla</span><i style="--v:5"></i></li>
-          <li><span>English</span><i style="--v:4"></i></li>
-          <li><span>Hindi</span><i style="--v:2"></i></li>
+
+      <div class="case-body">
+        <div class="case-block">
+          <h4 id="cs1-scope">Testing scope</h4>
+          <p>57 test cases across 7 areas, each with steps, expected result, priority (32 × P1, 18 × P2, 7 × P3) and the automated test that covers it. 53 are mapped to an automated test; 4 are manual-only (for example, the mobile menu).</p>
+          <ul class="scope-grid">
+            <li><span>Authentication</span><b>11</b></li>
+            <li><span>Sign-up</span><b>9</b></li>
+            <li><span>Booking</span><b>11</b></li>
+            <li><span>Privacy &amp; access control</span><b>8</b></li>
+            <li><span>Centre workflow &amp; reports</span><b>10</b></li>
+            <li><span>Report download</span><b>3</b></li>
+            <li><span>Homepage &amp; UI</span><b>5</b></li>
+          </ul>
+        </div>
+
+        <div class="case-block">
+          <h4 id="cs1-cases">Representative test cases</h4>
+          <div class="table-wrap" tabindex="0">
+            <table>
+              <caption class="sr-only">Representative DiagnoCare test cases</caption>
+              <thead><tr><th scope="col">ID</th><th scope="col">Scenario</th><th scope="col">Expected result</th><th scope="col">Priority</th></tr></thead>
+              <tbody>
+                <tr><td class="mono">TC-SEC-04</td><td>As patient B, open <code>/booking/&lt;patient A's id&gt;/</code></td><td>404 Not Found</td><td>P1</td></tr>
+                <tr><td class="mono">TC-SEC-02</td><td>Sign up a new user with the <em>same full name</em> as patient A</td><td>New user sees none of A's bookings</td><td>P1</td></tr>
+                <tr><td class="mono">TC-REP-03</td><td>Open <code>/media/reports/&lt;file&gt;.pdf</code> directly</td><td>404 — no public file URL</td><td>P1</td></tr>
+                <tr><td class="mono">TC-BOOK-09</td><td>Send a booking request without a CSRF token</td><td>403 Forbidden</td><td>P1</td></tr>
+                <tr><td class="mono">TC-BOOK-04</td><td>Book a test for yesterday's date</td><td>Blocked in the form and rejected by the server</td><td>P1</td></tr>
+                <tr><td class="mono">TC-AUTH-06</td><td>Log in with an extra <code>login-role=admin</code> field</td><td>Lands on the patient dashboard, not admin</td><td>P1</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="case-block">
+          <h4 id="cs1-defects">Defects found and fixed</h4>
+          <ul class="defects">
+            <li><span class="sev sev-critical">Critical</span><div><b>Patients could see other patients' reports</b> when they signed up with the same name or email. Fix: bookings are linked to the account, not matched by name/email.</div></li>
+            <li><span class="sev sev-high">High</span><div><b>Any logged-in user could open any booking</b> (phone, address) by changing the ID in the URL. Fix: only the patient, the booking's centre or an admin can open it.</div></li>
+            <li><span class="sev sev-high">High</span><div><b>Report PDFs were reachable by public URL</b> without logging in. Fix: permission-checked downloads; uploads must be real PDFs.</div></li>
+            <li><span class="sev sev-high">High</span><div><b>Centre status changes were saved only in the browser.</b> Fix: status is stored in the database.</div></li>
+            <li><span class="sev sev-medium">Medium</span><div><b>Booking API had CSRF protection disabled</b> and no server-side validation. Fix: CSRF re-enabled; invalid dates, fields, tests and centres rejected.</div></li>
+            <li><span class="sev sev-medium">Medium</span><div><b>“Book Now” while logged out led to a 404</b> instead of the login page. Fix: <code>LOGIN_URL</code> set; users return to the page they wanted.</div></li>
+            <li><span class="sev sev-low">Low</span><div><b>The “Today” filter showed yesterday's bookings</b> before 6&nbsp;AM. Fix: Bangladesh local time instead of UTC.</div></li>
+            <li><span class="sev sev-low">Low</span><div><b>Mobile menu never opened</b>; dead links; unverifiable homepage claims. Fix: menu toggle added, links checked, only true numbers shown.</div></li>
+          </ul>
+          <p class="fine">3 of the 8 are security issues (data exposure and access control). Each fix is guarded by regression tests.</p>
+        </div>
+
+        <div class="case-block">
+          <h4 id="cs1-auto">Automation &amp; what I learned</h4>
+          <p>71 tests using Django's test framework in <code>accounts/tests.py</code> (30) and <code>bookings/tests.py</code> (41). They cover login, roles, booking validation, CSRF, report permissions and the regressions above.</p>
+          <blockquote class="lesson">
+            <p><b>A passing test isn't always a good test.</b> My first test for the “Book Now → 404” bug only checked that the redirect <em>contained</em> <code>/login/</code>, and the broken URL <code>/accounts/login/</code> contains that too. I rewrote the assertions to check the exact URL and that the page loads, then confirmed the new tests fail without the fix (6 failures) and pass with it.</p>
+          </blockquote>
+        </div>
+
+        <div class="case-split">
+          <div class="case-block">
+            <h4 id="cs1-run">Run it yourself</h4>
+<pre class="code" tabindex="0"><code>git clone https://github.com/shihab-hossain1/DiagnoCare_2.0.git
+cd DiagnoCare_2.0
+python -m venv venv &amp;&amp; source venv/bin/activate
+pip install -r requirements.txt
+python manage.py test accounts bookings</code></pre>
+          </div>
+          <div class="case-block result">
+            <h4 id="cs1-result">Verified result</h4>
+<pre class="code result-code" tabindex="0"><code>Found 71 test(s).
+System check identified no issues.
+Ran 71 tests in 0.649s
+
+OK</code></pre>
+            <p class="fine">Re-run from the public repository on 22&nbsp;Oct&nbsp;2026 (Django 5.2.8).</p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ===== Case study 02: SQA assignment ===== -->
+    <article class="case" id="sqa-assignment" aria-labelledby="cs2-title">
+      <div class="case-meta">
+        <p class="case-num">Case study 02</p>
+        <h3 id="cs2-title">UI &amp; API automation — Playwright and Postman/Newman</h3>
+        <p class="case-summary">Automation assignment from my SQA course (Ostad): end-to-end UI tests against the SauceDemo practice store and API tests against the reqres.in practice API.</p>
+        <ul class="tag-list">
+          <li>Playwright (JavaScript)</li><li>Postman</li><li>Newman</li><li>Allure</li>
         </ul>
-        <div class="stats">
-          <div><strong data-count="3.88" data-dec="2">0</strong><span>CGPA</span></div>
-          <div><strong data-count="4" data-suffix="+">0</strong><span>Projects</span></div>
-        </div>
-      </div>
-      <div class="span2 rv d3">
-        <h3>Find Me</h3>
-        <div class="socials">
-          <a class="so" href="https://www.linkedin.com/in/shihab-hossain-b05926342/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.06c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1V21h-4v-5.1c0-1.22-.02-2.78-1.7-2.78-1.7 0-1.96 1.33-1.96 2.7V21h-4z"/></svg></a>
-          <a class="so" href="https://github.com/shihab-hossain1" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></svg></a>
-          <a class="so" href="https://t.me/shihab_skytar" target="_blank" rel="noopener" aria-label="Telegram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.3 18.7 19.4c-.24 1.06-.87 1.32-1.76.82l-4.86-3.58-2.35 2.26c-.26.26-.48.48-.98.48l.35-4.96 9.03-8.16c.39-.35-.09-.54-.61-.2L6.36 13.1l-4.8-1.5c-1.04-.33-1.06-1.04.22-1.54L20.5 2.86c.87-.32 1.63.2 1.4 1.44z"/></svg></a>
-          <a class="so" href="mailto:hossainshihab2001@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ TABLE OF CONTENT ============ -->
-<section class="slide toc" id="contents">
-  <div class="blob drift" style="width:30vw;height:30vw;min-width:260px;min-height:260px;left:4%;bottom:8%"></div>
-  <svg class="ribbon" viewBox="0 0 1200 700" preserveAspectRatio="none">
-    <path d="M700 760 C 820 560, 1000 600, 1100 420 S 1200 200, 1300 160" stroke="url(#rg)" stroke-width="110" fill="none" stroke-linecap="round"/>
-  </svg>
-  <div class="toc-wrap">
-    <h2 class="wide toc-title rv">Table <small>of</small><br>Content</h2>
-    <div class="cards">
-      <a class="card rv d1" href="#skills"><span>Technical Skills</span><strong>01</strong></a>
-      <a class="card rv d2" href="#projects"><span>Projects</span><strong>02</strong></a>
-      <a class="card rv d3" href="#journey"><span>Achievements &amp; Activities</span><strong>03</strong></a>
-    </div>
-  </div>
-</section>
-
-<!-- ============ SKILLS ============ -->
-<section class="slide section" id="skills">
-  <div class="blob violet" style="width:36vw;height:28vw;right:-8vw;top:-6vw;opacity:.55"></div>
-  <div class="wrap">
-    <div class="sec-head">
-      <span class="num rv">01</span>
-      <h2 class="wide rv d1">Skills</h2>
-    </div>
-    <div class="skill-groups">
-      <div class="sg rv d1">
-        <h3>Languages &amp; Core</h3>
-        <div class="chips">
-          <span class="chip">Python <em>OOP · Async</em></span><span class="chip">C++</span><span class="chip">JavaScript <em>Basic</em></span><span class="chip">HTML &amp; CSS</span><span class="chip">Data Structures &amp; Algorithms</span>
-        </div>
-      </div>
-      <div class="sg rv d2">
-        <h3>AI / Machine Learning</h3>
-        <div class="chips">
-          <span class="chip hot">Machine Learning</span><span class="chip hot">Deep Learning</span><span class="chip">NLP <em>exploring</em></span><span class="chip">Computer Vision</span><span class="chip">Pattern Recognition</span>
-        </div>
-      </div>
-      <div class="sg rv d3">
-        <h3>Frameworks &amp; Data</h3>
-        <div class="chips">
-          <span class="chip">Django</span><span class="chip">Flutter <em>UI · Firebase</em></span><span class="chip">MySQL</span><span class="chip">Typst</span>
-        </div>
-      </div>
-      <div class="sg rv d4">
-        <h3>Tools &amp; Hardware</h3>
-        <div class="chips">
-          <span class="chip">Git &amp; GitHub</span><span class="chip">Docker</span><span class="chip">Arduino</span><span class="chip">IoT</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ PROJECTS TITLE ============ -->
-<section class="slide title-slide" id="projects">
-  <div class="blob drift" style="width:34vw;height:30vw;min-width:300px;min-height:260px;left:33%;top:30%"></div>
-  <div class="num rv">02</div>
-  <h2 class="wide rv d1">Projects</h2>
-</section>
-
-<!-- ============ PROJECTS ============ -->
-<section class="slide section" id="project-list">
-  <div class="blob" style="width:30vw;height:22vw;left:-8vw;top:12%;opacity:.6"></div>
-  <div class="blob violet" style="width:26vw;height:20vw;right:-6vw;bottom:4%;opacity:.5"></div>
-  <div class="wrap">
-    <div class="projects">
-      <article class="proj rv d1">
-        <div class="proj-art" style="--a:#2b4dff;--b:#16c79a"><span>ML</span><svg viewBox="0 0 200 120" aria-hidden="true"><polyline points="10,100 40,82 70,88 100,60 130,52 160,30 190,18" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><g fill="#fff">
-          <circle cx="40" cy="82" r="4"/><circle cx="100" cy="60" r="4"/><circle cx="160" cy="30" r="4"/></g></svg></div>
-        <div class="proj-body">
-          <div class="proj-meta"><span>2026</span><span>Machine Learning</span></div>
-          <h3>Bangladesh House Price Predictor</h3>
-          <p>A machine-learning system that predicts apartment prices in major Bangladeshi cities from features like bedrooms, bathrooms, floor number, floor area, city and area.</p>
-          <div class="tags"><span>Python</span><span>scikit-learn</span><span>Regression</span></div>
-          <a class="proj-link" href="https://github.com/shihab-hossain1/main_project" target="_blank" rel="noopener">View on GitHub ↗</a>
-        </div>
-      </article>
-      <article class="proj rv d2">
-        <div class="proj-art" style="--a:#7b4dff;--b:#ff61f6"><span>WEB</span><svg viewBox="0 0 200 120" aria-hidden="true"><rect x="30" y="20" width="140" height="84" rx="8" fill="none" stroke="#fff" stroke-width="3"/><path d="M30 38h140" stroke="#fff" stroke-width="3"/><path d="M92 58v28M78 72h28" stroke="#fff" stroke-width="6" stroke-linecap="round"/></svg></div>
-        <div class="proj-body">
-          <div class="proj-meta"><span>2025</span><span>Web · Django</span></div>
-          <h3>DiagnoCare — Diagnostic Test Booking</h3>
-          <p>Patients book diagnostic tests, centers manage bookings and upload reports, and admins monitor overall system activity — all in one integrated Django platform.</p>
-          <div class="tags"><span>Django</span><span>Python</span><span>MySQL</span></div>
-          <a class="proj-link" href="https://github.com/shihab-hossain1" target="_blank" rel="noopener">View on GitHub ↗</a>
-        </div>
-      </article>
-      <article class="proj rv d3">
-        <div class="proj-art" style="--a:#d81e2c;--b:#ffb020"><span>DB</span><svg viewBox="0 0 200 120" aria-hidden="true"><ellipse cx="100" cy="28" rx="46" ry="12" fill="none" stroke="#fff" stroke-width="3"/><path d="M54 28v60c0 7 21 12 46 12s46-5 46-12V28M54 58c0 7 21 12 46 12s46-5 46-12" fill="none" stroke="#fff" stroke-width="3"/></svg></div>
-        <div class="proj-body">
-          <div class="proj-meta"><span>2025</span><span>Database System</span></div>
-          <h3>Patient Record Management System</h3>
-          <p>Stores patients' medical information for rapid retrieval. Registered doctors and staff record data; doctors view full histories. Registration via National ID, passport or birth certificate.</p>
-          <div class="tags"><span>SQL</span><span>DBMS</span><span>Python</span></div>
-          <a class="proj-link" href="https://github.com/shihab-hossain1" target="_blank" rel="noopener">View on GitHub ↗</a>
-        </div>
-      </article>
-      <article class="proj rv d4">
-        <div class="proj-art" style="--a:#f2b705;--b:#e8562a"><span>IoT</span><svg viewBox="0 0 200 120" aria-hidden="true"><circle cx="100" cy="48" r="18" fill="#fff"/><g stroke="#fff" stroke-width="3" stroke-linecap="round"><path d="M100 14v8M100 74v8M66 48h8M126 48h8M76 24l6 6M118 66l6 6M124 24l-6 6M82 66l-6 6"/></g><path d="M40 108l30-18h60l30 18z" fill="none" stroke="#fff" stroke-width="3"/></svg></div>
-        <div class="proj-body">
-          <div class="proj-meta"><span>2024</span><span>Arduino · IoT</span></div>
-          <h3>Solar Tracking System</h3>
-          <p>Follows the sun to boost panel efficiency: LDR sensors and an Arduino Uno automatically tilt the panel toward the brightest light, capturing more energy than a fixed panel.</p>
-          <div class="tags"><span>Arduino Uno</span><span>LDR Sensors</span><span>C++</span></div>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ============ JOURNEY ============ -->
-<section class="slide section" id="journey">
-  <div class="blob" style="width:36vw;height:28vw;right:-10vw;top:20%;opacity:.5"></div>
-  <div class="wrap">
-    <div class="sec-head">
-      <span class="num rv">03</span>
-      <h2 class="wide rv d1">Journey</h2>
-    </div>
-    <div class="journey">
-      <div class="col">
-        <h3 class="rv">Achievements</h3>
-        <ul class="tl big">
-          <li class="rv d1"><b>2026</b><strong>CGPA 4.00 / 4 in Major Courses</strong>Computer Networks, Pattern Recognition, Compiler, Software Engineering, DBMS, Computer Graphics, Microprocessors and more.</li>
-          <li class="rv d2"><b>2026</b><strong>CSE Club</strong>Participated in coding contests and workshops.</li>
-          <li class="rv d3"><b>2025</b><strong>Phitron</strong>Completed the Phitron programming course.</li>
-          <li class="rv d4"><b>2019</b><strong>Spoken English Certification</strong>Awarded by Speakers Council.</li>
+        <ul class="link-list">
+          <li><a href="https://github.com/shihab-hossain1/SQA-shihab-assignment" target="_blank" rel="noopener">Repository<span class="sr-only"> (opens in a new tab)</span> ↗</a></li>
+          <li><a href="https://github.com/shihab-hossain1/sqa-automation-assessment" target="_blank" rel="noopener">Page Object Model version<span class="sr-only"> (opens in a new tab)</span> ↗</a></li>
         </ul>
       </div>
-      <div class="col">
-        <h3 class="rv">Activities</h3>
-        <ul class="tl big">
-          <li class="rv d1"><b>2023 – Present</b><strong>PCIU Computer Club</strong>Dedicated member supporting projects, workshops and events.</li>
-          <li class="rv d2"><b>2019 – Present</b><strong>Teaching</strong>Peer-to-peer teaching for school and college students.</li>
-          <li class="rv d3"><b>2021</b><strong>Campus Ambassador</strong>Promoted educational programs and connected students with learning opportunities.</li>
-          <li class="rv d4"><b>2019</b><strong>Speakers Council — MUN Workshop</strong>Introduction to Model United Nations.</li>
-        </ul>
+
+      <div class="case-body">
+        <div class="case-block">
+          <h4 id="cs2-scope">Testing scope</h4>
+          <div class="two-col">
+            <div>
+              <h5>UI — SauceDemo (3 end-to-end tests)</h5>
+              <ul class="plain">
+                <li>Locked-out user sees the correct error message</li>
+                <li>Standard user buys 3 items: cart badge, item names, subtotal, tax and total</li>
+                <li>Performance-glitch user sorts Z→A, buys the first item; total computed from the live price</li>
+              </ul>
+            </div>
+            <div>
+              <h5>API — reqres.in (9 requests, 19 assertions)</h5>
+              <ul class="plain">
+                <li>Register and log in; user ID and token saved as variables</li>
+                <li>GET, PUT and PATCH a user; fields and <code>updatedAt</code> checked</li>
+                <li>Negative cases: missing password (400), wrong email (4xx), unknown user (404)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="case-block">
+          <h4 id="cs2-cases">Representative checks</h4>
+          <div class="table-wrap" tabindex="0">
+            <table>
+              <caption class="sr-only">Representative UI and API checks</caption>
+              <thead><tr><th scope="col">Test</th><th scope="col">What it verifies</th><th scope="col">Type</th></tr></thead>
+              <tbody>
+                <tr><td class="mono">Q1</td><td>Error text equals “Epic sadface: Sorry, this user has been locked out.”</td><td>UI · negative</td></tr>
+                <tr><td class="mono">Q2</td><td>Item total $55.97, tax $4.48, total $60.45; order confirmation shown</td><td>UI · E2E</td></tr>
+                <tr><td class="mono">Q3</td><td>After Z→A sort, checkout total = first item's price + 8% tax</td><td>UI · E2E</td></tr>
+                <tr><td class="mono">PUT</td><td>Status 200, name and job updated, <code>updatedAt</code> is today</td><td>API</td></tr>
+                <tr><td class="mono">PATCH</td><td>Status 200, only <code>job</code> changes</td><td>API</td></tr>
+                <tr><td class="mono">Login</td><td>Without password → 400 “Missing password”</td><td>API · negative</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="fine">Defects: none logged. SauceDemo and reqres.in are public practice targets, so this project is about automation design and assertions, not finding product bugs.</p>
+        </div>
+
+        <div class="case-block">
+          <h4 id="cs2-auto">Automation setup</h4>
+          <ul class="plain">
+            <li>Playwright Test with headless Chromium, run sequentially (1 worker), screenshots on failure</li>
+            <li>List, HTML and Allure reporters</li>
+            <li>Postman collection with chained environment variables, run from the CLI by Newman with an HTML (htmlextra) report</li>
+          </ul>
+        </div>
+
+        <div class="case-split">
+          <div class="case-block">
+            <h4 id="cs2-run">Run it yourself</h4>
+<pre class="code" tabindex="0"><code>npm install
+npx playwright install chromium
+npm test            # 3 Playwright UI tests
+export REQRES_API_KEY=&lt;your key&gt;
+npx newman run postman/reqres-collection.json \
+  -e postman/reqres-environment.json \
+  --env-var "apiKey=$REQRES_API_KEY"</code></pre>
+          </div>
+          <div class="case-block result">
+            <h4 id="cs2-result">Recorded results</h4>
+            <ul class="result-list">
+              <li><b>Playwright:</b> 3 / 3 passed, 0 failed (28.7&nbsp;s)</li>
+              <li><b>Allure:</b> 3 test cases, 100% passed</li>
+              <li><b>Postman runner:</b> 19 / 19 assertions passed, 0 errors</li>
+            </ul>
+            <p class="fine">From my run on 17&nbsp;Oct&nbsp;2026. Screenshots:
+              <a href="https://github.com/shihab-hossain1/SQA-shihab-assignment/blob/main/test-passed%20Screenshot%202026-10-17%20013840.png" target="_blank" rel="noopener">Playwright<span class="sr-only"> report screenshot (opens in a new tab)</span></a>,
+              <a href="https://github.com/shihab-hossain1/SQA-shihab-assignment/blob/main/Allure-report-Screenshot%202026-10-17%20014449.png" target="_blank" rel="noopener">Allure<span class="sr-only"> report screenshot (opens in a new tab)</span></a>,
+              <a href="https://github.com/shihab-hossain1/SQA-shihab-assignment/blob/main/postman-Screenshot%202026-10-17%20015535.png" target="_blank" rel="noopener">Postman<span class="sr-only"> runner screenshot (opens in a new tab)</span></a>.
+            </p>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="interests rv">
-      <span>Interests</span>
-      <div class="marquee"><div class="track">
-        <em>Artificial Intelligence</em><em>LLM-based Systems</em><em>Research &amp; Innovation</em><em>Computer Vision</em><em>NLP</em><em>Backend Development</em><em>Data Structures &amp; Algorithms</em><em>Tech Blogging</em>
-        <em>Artificial Intelligence</em><em>LLM-based Systems</em><em>Research &amp; Innovation</em><em>Computer Vision</em><em>NLP</em><em>Backend Development</em><em>Data Structures &amp; Algorithms</em><em>Tech Blogging</em>
-      </div></div>
+    </article>
+  </div>
+</section>
+
+<!-- ================= PROJECTS ================= -->
+<section id="projects" class="section section-alt" aria-labelledby="projects-title">
+  <div class="container">
+    <header class="section-head">
+      <p class="eyebrow">Supporting work</p>
+      <h2 id="projects-title">Projects</h2>
+    </header>
+
+    <article class="feature-card" aria-labelledby="prm-title">
+      <div>
+        <p class="card-kicker">SQL · Data integrity</p>
+        <h3 id="prm-title">Patient Record Management System</h3>
+        <p>A relational MySQL database for hospitals, doctors, patients, consultations, diagnoses and operations. It has 12 tables. Data integrity is enforced with primary keys, 13 foreign-key constraints and <code>NOT NULL</code> rules, so invalid or orphaned records are rejected at the database level. This schema work is the SQL I now use to check backend data while testing.</p>
+        <ul class="tag-list"><li>MySQL</li><li>SQL</li><li>ER design</li></ul>
+      </div>
+      <a class="card-link" href="https://github.com/shihab-hossain1/Database_Project" target="_blank" rel="noopener">View repository<span class="sr-only"> for Patient Record Management (opens in a new tab)</span> ↗</a>
+    </article>
+
+    <h3 class="subhead">Other projects</h3>
+    <div class="other-grid">
+      <article class="mini-card" aria-labelledby="hpp-title">
+        <p class="card-kicker">2026 · Machine learning</p>
+        <h4 id="hpp-title">Bangladesh House Price Predictor</h4>
+        <p>Estimates apartment prices in major Bangladeshi cities from bedrooms, bathrooms, floor, floor area, city and area.</p>
+        <p class="card-status">Python · scikit-learn — repository not yet public</p>
+      </article>
+      <article class="mini-card" aria-labelledby="solar-title">
+        <p class="card-kicker">2024 · Arduino · IoT</p>
+        <h4 id="solar-title">Solar Tracking System</h4>
+        <p>LDR sensors and an Arduino Uno tilt a solar panel toward the brightest light, capturing more energy than a fixed panel.</p>
+        <p class="card-status">Arduino Uno · C++ — no public repository</p>
+      </article>
     </div>
   </div>
 </section>
 
-<!-- ============ CONTACT ============ -->
-<section class="slide contact" id="contact">
-  <div class="blob drift" style="width:50vw;height:30vw;min-width:360px;min-height:240px;left:-6%;top:20%;opacity:.8"></div>
-  <div class="contact-grid">
+<!-- ================= SKILLS ================= -->
+<section id="skills" class="section" aria-labelledby="skills-title">
+  <div class="container">
+    <header class="section-head">
+      <p class="eyebrow">Toolkit</p>
+      <h2 id="skills-title">Skills</h2>
+      <p class="section-intro">Each skill is linked to work above. <span class="lvl lvl-applied">Applied</span> means used in a project; <span class="lvl lvl-learning">Learning</span> means I'm still building experience.</p>
+    </header>
+    <div class="skills-grid">
+      <section class="skill-group" aria-labelledby="sk1">
+        <h3 id="sk1">Testing foundations</h3>
+        <ul>
+          <li>Test case design (steps, expected result, priority) <span class="lvl lvl-applied">Applied</span></li>
+          <li>Manual functional testing <span class="lvl lvl-applied">Applied</span></li>
+          <li>Bug reporting: steps to reproduce, expected vs actual, severity <span class="lvl lvl-applied">Applied</span></li>
+          <li>Access-control &amp; security-minded testing <span class="lvl lvl-applied">Applied</span></li>
+          <li>Regression testing <span class="lvl lvl-applied">Applied</span></li>
+          <li>SDLC / STLC and test planning <span class="lvl lvl-learning">Learning</span></li>
+        </ul>
+      </section>
+      <section class="skill-group" aria-labelledby="sk2">
+        <h3 id="sk2">API testing</h3>
+        <ul>
+          <li>Postman: collections, environments, chained variables <span class="lvl lvl-applied">Applied</span></li>
+          <li>Status, body and negative-case assertions <span class="lvl lvl-applied">Applied</span></li>
+          <li>Newman CLI runs with HTML reports <span class="lvl lvl-applied">Applied</span></li>
+        </ul>
+      </section>
+      <section class="skill-group" aria-labelledby="sk3">
+        <h3 id="sk3">UI automation</h3>
+        <ul>
+          <li>Playwright Test (JavaScript) <span class="lvl lvl-applied">Applied</span></li>
+          <li>Page Object Model <span class="lvl lvl-applied">Applied</span></li>
+          <li>Allure and Playwright HTML reports <span class="lvl lvl-applied">Applied</span></li>
+          <li>CI test runs (GitHub Actions) <span class="lvl lvl-learning">Learning</span></li>
+        </ul>
+      </section>
+      <section class="skill-group" aria-labelledby="sk4">
+        <h3 id="sk4">Database testing</h3>
+        <ul>
+          <li>Relational schema design and constraints (MySQL) <span class="lvl lvl-applied">Applied</span></li>
+          <li>Isolated test databases (Django) <span class="lvl lvl-applied">Applied</span></li>
+          <li>SQL queries for backend data validation <span class="lvl lvl-learning">Learning</span></li>
+        </ul>
+      </section>
+      <section class="skill-group" aria-labelledby="sk5">
+        <h3 id="sk5">Development tools</h3>
+        <ul>
+          <li>Python and Django <span class="lvl lvl-applied">Applied</span></li>
+          <li>Django test framework (unittest) <span class="lvl lvl-applied">Applied</span></li>
+          <li>Git and GitHub <span class="lvl lvl-applied">Applied</span></li>
+          <li>JavaScript (for test code) <span class="lvl lvl-applied">Applied</span></li>
+          <li>C++ and data structures <span class="lvl lvl-applied">Applied</span></li>
+        </ul>
+      </section>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section id="about" class="section section-alt" aria-labelledby="about-title">
+  <div class="container about-grid">
+    <figure class="portrait">
+      <img src="assets/portrait-640.webp"
+           srcset="assets/portrait-320.webp 320w, assets/portrait-640.webp 640w"
+           sizes="(max-width: 800px) 70vw, 360px"
+           width="640" height="760" loading="lazy" decoding="async"
+           alt="Portrait of Shihab Hossain">
+    </figure>
+    <div class="about-copy">
+      <p class="eyebrow">About</p>
+      <h2 id="about-title">From building software to making sure it works</h2>
+      <p>I'm a Computer Science and Engineering student at Port City International University in Chattogram, Bangladesh. I learned to build with Python, Django and SQL. Then, testing my own app, DiagnoCare, I found that the most valuable work was finding what was broken: data leaking between patients, URLs that bypassed permissions, tests that passed for the wrong reason.</p>
+      <p>Now I'm focused on software quality assurance. I write clear test cases, test APIs and automate critical journeys, and I'm looking for an SQA internship or junior QA role where I can learn from an experienced team.</p>
+      <dl class="facts">
+        <div><dt>Education</dt><dd>B.Sc. in Computer Science &amp; Engineering, Port City International University (2022 – present), CGPA 3.88 / 4.00</dd></div>
+        <div><dt>QA training</dt><dd>Software Quality Assurance course, Ostad (Playwright and Postman/Newman assignment, October 2026)</dd></div>
+        <div><dt>Programming</dt><dd>Phitron programming course (completed 2025)</dd></div>
+        <div><dt>Languages</dt><dd>Bangla, English, Hindi (basic)</dd></div>
+        <div><dt>Location</dt><dd>Chattogram, Bangladesh</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="section" aria-labelledby="contact-title">
+  <div class="container contact-grid">
     <div>
-      <h2 class="wide rv">Let's<br>Talk<sup>°</sup></h2>
-      <p class="rv d1 lead">Looking for an intern or junior developer who loves AI? Send a message — it lands straight in my inbox.</p>
-      <a class="mail rv d2" href="mailto:hossainshihab2001@gmail.com">hossainshihab2001@gmail.com ↗</a>
+      <p class="eyebrow">Contact</p>
+      <h2 id="contact-title">Let's talk about QA roles</h2>
+      <p class="section-intro">The fastest way to reach me is email. You can also send a message with the form.</p>
+      <ul class="contact-actions">
+        <li><a class="contact-link" href="mailto:hossainshihab2001@gmail.com"><span>Email</span>hossainshihab2001@gmail.com</a></li>
+        <li><a class="contact-link" href="https://www.linkedin.com/in/shihab-hossain3/" target="_blank" rel="noopener"><span>LinkedIn</span>linkedin.com/in/shihab-hossain3<span class="sr-only"> (opens in a new tab)</span></a></li>
+        <li><a class="contact-link" href="https://github.com/shihab-hossain1" target="_blank" rel="noopener"><span>GitHub</span>github.com/shihab-hossain1<span class="sr-only"> (opens in a new tab)</span></a></li>
+        <li id="cvContactItem" hidden><a class="contact-link" href="assets/Shihab-Hossain-CV.pdf" download><span>CV</span>Download PDF</a></li>
+      </ul>
     </div>
-    <form class="form rv d2" id="contactForm" novalidate>
-      <label>Your name<input name="name" required maxlength="100" autocomplete="name"></label>
-      <label>Email<input name="email" type="email" required maxlength="200" autocomplete="email"></label>
-      <label>Message<textarea name="message" rows="5" required maxlength="5000"></textarea></label>
-      <input name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
-      <button class="btn primary" type="submit" id="sendBtn">Send message</button>
-      <p class="status" id="formStatus" role="status"></p>
+
+    <form class="form" id="contactForm" novalidate aria-labelledby="form-title">
+      <h3 id="form-title">Send a message</h3>
+      <div class="field">
+        <label for="f-name">Name</label>
+        <input id="f-name" name="name" type="text" autocomplete="name" maxlength="100" required aria-describedby="f-name-err">
+        <p class="field-error" id="f-name-err"></p>
+      </div>
+      <div class="field">
+        <label for="f-email">Email</label>
+        <input id="f-email" name="email" type="email" autocomplete="email" maxlength="200" required aria-describedby="f-email-err">
+        <p class="field-error" id="f-email-err"></p>
+      </div>
+      <div class="field">
+        <label for="f-message">Message</label>
+        <textarea id="f-message" name="message" rows="5" maxlength="5000" required aria-describedby="f-message-err"></textarea>
+        <p class="field-error" id="f-message-err"></p>
+      </div>
+      <div class="hp" aria-hidden="true"><label for="f-website">Leave this empty</label><input id="f-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+      <button class="btn btn-primary" type="submit" id="sendBtn">Send message</button>
+      <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
     </form>
   </div>
-  <div class="foot"><span>© <span id="year">2026</span> Shihab Hossain</span><span>Built with Claude · VS Code · Vercel · Render</span></div>
 </section>
+</main>
 
-<nav class="dots" id="dots" aria-label="Sections"></nav>
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>© <span id="year">2026</span> Shihab Hossain</p>
+    <p><a href="#main">Back to top ↑</a></p>
+  </div>
+</footer>
 
 <script src="config.js"></script>
 <script src="script.js"></script>
