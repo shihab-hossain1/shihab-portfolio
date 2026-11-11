@@ -1,0 +1,47 @@
+name: Portfolio tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  qa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: qa
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: qa/package-lock.json
+
+      - name: Install test dependencies
+        run: npm ci
+
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Serve the site
+        run: |
+          python3 -m http.server 5500 --directory ../frontend > /dev/null 2>&1 &
+          for i in $(seq 1 20); do curl -sf http://localhost:5500/ > /dev/null && break; sleep 1; done
+
+      - name: Run portfolio checks
+        run: npm test
+        env:
+          BASE_URL: http://localhost:5500/
+
+      - name: Upload screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: portfolio-screenshots
+          path: qa/screenshots/
+          retention-days: 14

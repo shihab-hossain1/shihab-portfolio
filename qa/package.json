@@ -1,0 +1,14 @@
+{
+  "name": "portfolio-qa",
+  "private": true,
+  "description": "Automated QA checks for the portfolio frontend",
+  "scripts": {
+    "test": "npm run lint:html && node portfolio.check.js",
+    "lint:html": "html-validate -c .htmlvalidate.json ../frontend/index.html"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.56.0",
+    "axe-core": "4.10.2",
+    "html-validate": "8.24.1"
+  }
+}

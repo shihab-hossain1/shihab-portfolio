@@ -83,3 +83,16 @@ form.addEventListener("submit", async e => {
     btn.disabled = false; btn.textContent = "Send message";
   }
 });
+
+// ---- Screenshot lightbox (falls back to opening the image if <dialog> isn't supported) ----
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightboxImg");
+if (lightbox && typeof lightbox.showModal === "function") {
+  document.querySelectorAll("a[data-lightbox]").forEach(a => a.addEventListener("click", e => {
+    e.preventDefault();
+    lightboxImg.src = a.href;
+    lightboxImg.alt = a.querySelector("img").alt;
+    lightbox.showModal();
+  }));
+  lightbox.addEventListener("click", e => { if (e.target === lightbox) lightbox.close(); });
+}

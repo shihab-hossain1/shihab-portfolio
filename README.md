@@ -1,5 +1,11 @@
 # Shihab Hossain — Portfolio Website
 
+[![Portfolio tests](https://github.com/shihab-hossain1/shihab-portfolio/actions/workflows/portfolio-tests.yml/badge.svg?branch=main)](https://github.com/shihab-hossain1/shihab-portfolio/actions/workflows/portfolio-tests.yml)
+
+**🔗 Live site: https://shihab-portfolio-frontend.vercel.app/**
+
+Every push runs 26 automated QA checks (HTML validation, axe accessibility, links, CV download, contact form, mobile layout) — see [`qa/`](qa/).
+
 A complete personal portfolio: **frontend** (HTML/CSS/JS) on **Vercel** + **backend** (Node.js/Express) on **Render**.
 Total cost: **$0**.
 

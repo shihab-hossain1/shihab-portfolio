@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -19,16 +19,18 @@
 
 <header class="nav" id="nav">
   <a href="#home" class="brand">SH<sup>°</sup></a>
-  <nav class="links" id="links">
+  <nav class="links" id="links" aria-label="Main">
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
     <a href="#projects">Projects</a>
+    <a href="#bug-report">Bug Report</a>
     <a href="#journey">Journey</a>
     <a href="#contact" class="pill">Contact</a>
   </nav>
-  <button class="burger" id="burger" aria-label="Open menu"><span></span><span></span></button>
+  <button type="button" class="burger" id="burger" aria-label="Open menu"><span></span><span></span></button>
 </header>
 
+<main id="main">
 <!-- ============ HERO ============ -->
 <section class="slide hero" id="home">
   <div class="blob drift" style="width:62vw;height:34vw;min-width:420px;min-height:260px;left:20%;top:24%"></div>
@@ -39,9 +41,10 @@
   <div class="hero-inner">
     <p class="eyebrow rv">Aspiring SQA Engineer · Manual &amp; API Testing · Playwright</p>
     <h1 class="wide rv d1">Portfolio<sup>°</sup></h1>
-    <p class="hero-sub rv d2">I'm <b>Shihab Hossain</b> — a CSE student who designs test cases, tests APIs, automates user journeys and reports bugs developers can reproduce.</p>
+    <p class="hero-sub rv d2">I'm <b>Shihab Hossain</b> — a CSE graduate who designs test cases, tests APIs, automates user journeys and reports bugs developers can reproduce.</p>
     <div class="hero-cta rv d3">
       <a href="#projects" class="btn primary">See my work</a>
+      <a href="assets/Shihab-Hossain-CV.pdf" class="btn ghost" download>Download CV ↓</a>
       <a href="#contact" class="btn ghost">Get in touch ↗</a>
     </div>
   </div>
@@ -61,26 +64,25 @@
     <div class="info">
       <div class="span2 rv d1">
         <h3>About Me</h3>
-        <p>Aspiring Software Quality Assurance Engineer and Computer Science and Engineering student. I write clear test cases, test APIs with Postman and Newman, automate user journeys with Playwright, and report bugs with steps developers can reproduce. I started as a Python/Django developer — testing my own app, DiagnoCare, I found and fixed real defects, including patient data visible to other users. I'm looking for an SQA internship or junior QA role where I can learn from an experienced team.</p>
+        <p>Aspiring Software Quality Assurance Engineer and Computer Science and Engineering graduate. I write clear test cases, test APIs with Postman and Newman, automate user journeys with Playwright, and report bugs with steps developers can reproduce. I started as a Python/Django developer — testing my own app, DiagnoCare, I found and fixed real defects, including patient data visible to other users. I'm looking for an SQA internship or junior QA role where I can learn from an experienced team.</p>
       </div>
       <div class="rv d2">
         <h3>Education</h3>
         <ul class="tl">
-          <li><b>2022 – Present</b>B.Sc in CSE, Port City International University — <em>CGPA 3.88</em></li>
+          <li><b>2022 – 2026</b>B.Sc in CSE, Port City International University — <em>CGPA 3.88</em></li>
           <li><b>2021</b>HSC, Hazera Taju Degree College — <em>GPA 5.00</em></li>
           <li><b>2019</b>SSC, Nasirabad Govt. High School — <em>GPA 5.00</em></li>
         </ul>
       </div>
       <div class="rv d2">
-        <h3>Languages</h3>
-        <ul class="lang">
-          <li><span>Bangla</span><i style="--v:5"></i></li>
-          <li><span>English</span><i style="--v:4"></i></li>
-          <li><span>Hindi</span><i style="--v:2"></i></li>
-        </ul>
+        <h3>At a Glance</h3>
         <div class="stats">
           <div><strong data-count="3.88" data-dec="2">3.88</strong><span>CGPA</span></div>
           <div><strong data-count="57">57</strong><span>Test cases written</span></div>
+        </div>
+        <div class="stats">
+          <div><strong data-count="8">8</strong><span>Defects found</span></div>
+          <div><strong data-count="71">71</strong><span>Automated tests</span></div>
         </div>
       </div>
       <div class="span2 rv d3">
@@ -88,26 +90,10 @@
         <div class="socials">
           <a class="so" href="https://www.linkedin.com/in/shihab-hossain3/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.06c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1V21h-4v-5.1c0-1.22-.02-2.78-1.7-2.78-1.7 0-1.96 1.33-1.96 2.7V21h-4z"/></svg></a>
           <a class="so" href="https://github.com/shihab-hossain1" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></svg></a>
-          <a class="so" href="https://t.me/shihab_skytar" target="_blank" rel="noopener" aria-label="Telegram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.3 18.7 19.4c-.24 1.06-.87 1.32-1.76.82l-4.86-3.58-2.35 2.26c-.26.26-.48.48-.98.48l.35-4.96 9.03-8.16c.39-.35-.09-.54-.61-.2L6.36 13.1l-4.8-1.5c-1.04-.33-1.06-1.04.22-1.54L20.5 2.86c.87-.32 1.63.2 1.4 1.44z"/></svg></a>
+          <a class="so" href="assets/Shihab-Hossain-CV.pdf" download aria-label="Download CV (PDF)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M12 11v6M9 14l3 3 3-3"/></svg></a>
           <a class="so" href="mailto:hossainshihab2001@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ TABLE OF CONTENT ============ -->
-<section class="slide toc" id="contents">
-  <div class="blob drift" style="width:30vw;height:30vw;min-width:260px;min-height:260px;left:4%;bottom:8%"></div>
-  <svg class="ribbon" viewBox="0 0 1200 700" preserveAspectRatio="none">
-    <path d="M700 760 C 820 560, 1000 600, 1100 420 S 1200 200, 1300 160" stroke="url(#rg)" stroke-width="110" fill="none" stroke-linecap="round"/>
-  </svg>
-  <div class="toc-wrap">
-    <h2 class="wide toc-title rv">Table <small>of</small><br>Content</h2>
-    <div class="cards">
-      <a class="card rv d1" href="#skills"><span>QA Skills</span><strong>01</strong></a>
-      <a class="card rv d2" href="#projects"><span>QA Projects</span><strong>02</strong></a>
-      <a class="card rv d3" href="#journey"><span>Achievements &amp; Activities</span><strong>03</strong></a>
     </div>
   </div>
 </section>
@@ -149,18 +135,15 @@
   </div>
 </section>
 
-<!-- ============ PROJECTS TITLE ============ -->
-<section class="slide title-slide" id="projects">
-  <div class="blob drift" style="width:34vw;height:30vw;min-width:300px;min-height:260px;left:33%;top:30%"></div>
-  <div class="num rv">02</div>
-  <h2 class="wide rv d1">Projects</h2>
-</section>
-
 <!-- ============ PROJECTS ============ -->
-<section class="slide section" id="project-list">
+<section class="slide section" id="projects">
   <div class="blob" style="width:30vw;height:22vw;left:-8vw;top:12%;opacity:.6"></div>
   <div class="blob violet" style="width:26vw;height:20vw;right:-6vw;bottom:4%;opacity:.5"></div>
   <div class="wrap">
+    <div class="sec-head">
+      <span class="num rv">02</span>
+      <h2 class="wide rv d1">Projects</h2>
+    </div>
     <div class="projects">
       <article class="proj rv d1">
         <div class="proj-art" style="--a:#7b4dff;--b:#ff61f6"><span>QA</span><svg viewBox="0 0 200 120" aria-hidden="true"><rect x="30" y="20" width="140" height="84" rx="8" fill="none" stroke="#fff" stroke-width="3"/><path d="M30 38h140" stroke="#fff" stroke-width="3"/><path d="M80 72l14 14 28-30" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
@@ -215,12 +198,72 @@
   </div>
 </section>
 
+<!-- ============ SAMPLE BUG REPORT + PROOF ============ -->
+<section class="slide section" id="bug-report">
+  <div class="blob violet" style="width:34vw;height:26vw;right:-10vw;top:6%;opacity:.5"></div>
+  <div class="blob" style="width:28vw;height:22vw;left:-10vw;bottom:2%;opacity:.45"></div>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="num rv">03</span>
+      <h2 class="wide rv d1">Bug Report</h2>
+    </div>
+    <p class="bug-intro rv d1">A real defect I found while testing DiagnoCare 2.0, written the way I report bugs.</p>
+
+    <article class="bug rv d2" aria-labelledby="bug-title">
+      <header class="bug-head">
+        <div class="bug-tags"><span class="sev high">High</span><span class="pill-tag">P1</span><span class="pill-tag">Security · Access control</span><span class="pill-tag fixed">✓ Fixed</span></div>
+        <h3 id="bug-title">Any logged-in user can open another patient's booking by changing the ID in the URL</h3>
+      </header>
+      <dl class="bug-grid">
+        <div><dt>Environment</dt><dd>DiagnoCare 2.0 (Django), local development build, Chrome</dd></div>
+        <div><dt>Preconditions</dt><dd>Two patient accounts: Patient A has a booking; you are logged in as Patient B.</dd></div>
+        <div class="wide-row"><dt>Steps to reproduce</dt><dd><ol>
+          <li>Log in as Patient A, create a booking and note its ID in the URL: <code>/booking/&lt;id&gt;/</code></li>
+          <li>Log out, then log in as Patient B.</li>
+          <li>Open <code>/booking/&lt;Patient A's id&gt;/</code> directly in the address bar.</li>
+        </ol></dd></div>
+        <div><dt>Expected result</dt><dd><b class="ok-text">404 Not Found.</b> Patient B must not see Patient A's booking (test case TC-SEC-04).</dd></div>
+        <div><dt>Actual result</dt><dd><b class="bad-text">The page loads</b> and shows Patient A's booking, including their phone number and address.</dd></div>
+        <div class="wide-row"><dt>Impact</dt><dd>Personal data exposure: any account could read other patients' bookings just by trying different IDs.</dd></div>
+        <div><dt>Fix</dt><dd>Only the booking's patient, its diagnostic centre or an admin can open it; everyone else gets a 404.</dd></div>
+        <div><dt>Regression tests</dt><dd><code>test_other_patient_cannot_view</code>, <code>test_other_center_cannot_view</code>, <code>test_anonymous_is_sent_to_login</code> — all passing.</dd></div>
+      </dl>
+      <p class="bug-src">Source: <a href="https://github.com/shihab-hossain1/DiagnoCare_2.0" target="_blank" rel="noopener">DiagnoCare 2.0 README</a> (defect list), <a href="https://github.com/shihab-hossain1/DiagnoCare_2.0/blob/master/docs/test-cases.md" target="_blank" rel="noopener">test case TC-SEC-04</a> and <code>bookings/tests.py</code>.</p>
+    </article>
+
+    <h3 class="proof-title rv">Proof of work</h3>
+    <div class="proof-grid">
+      <figure class="proof rv d1">
+        <a href="assets/proof/diagnocare-tests.webp" data-lightbox aria-label="Open larger: DiagnoCare test run, 71 tests passed"><img src="assets/proof/diagnocare-tests-thumb.webp" width="640" height="237" loading="lazy" alt="Terminal output: Ran 71 tests, OK"></a>
+        <figcaption><b>DiagnoCare — 71 / 71 tests passed</b>Django test run, 11 Nov 2026</figcaption>
+      </figure>
+      <figure class="proof rv d2">
+        <a href="assets/proof/playwright-report.webp" data-lightbox aria-label="Open larger: Playwright report, 3 tests passed"><img src="assets/proof/playwright-report-thumb.webp" width="640" height="344" loading="lazy" alt="Playwright HTML report showing 3 passed tests"></a>
+        <figcaption><b>Playwright — 3 / 3 passed</b>SauceDemo UI tests, 17 Oct 2026</figcaption>
+      </figure>
+      <figure class="proof rv d3">
+        <a href="assets/proof/allure-report.webp" data-lightbox aria-label="Open larger: Allure report, 100 percent passed"><img src="assets/proof/allure-report-thumb.webp" width="640" height="344" loading="lazy" alt="Allure report overview showing 100 percent of tests passed"></a>
+        <figcaption><b>Allure report — 100% passed</b>Same 3 UI tests, 17 Oct 2026</figcaption>
+      </figure>
+      <figure class="proof rv d4">
+        <a href="assets/proof/postman-runner.webp" data-lightbox aria-label="Open larger: Postman runner, 19 assertions passed"><img src="assets/proof/postman-runner-thumb.webp" width="640" height="360" loading="lazy" alt="Postman collection runner showing 19 passed assertions"></a>
+        <figcaption><b>Postman — 19 / 19 passed</b>reqres.in API tests, 17 Oct 2026</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<dialog class="lightbox" id="lightbox">
+  <form method="dialog"><button type="submit" class="lb-close" aria-label="Close preview">✕</button></form>
+  <img id="lightboxImg" src="assets/proof/diagnocare-tests-thumb.webp" alt="">
+</dialog>
+
 <!-- ============ JOURNEY ============ -->
 <section class="slide section" id="journey">
   <div class="blob" style="width:36vw;height:28vw;right:-10vw;top:20%;opacity:.5"></div>
   <div class="wrap">
     <div class="sec-head">
-      <span class="num rv">03</span>
+      <span class="num rv">04</span>
       <h2 class="wide rv d1">Journey</h2>
     </div>
     <div class="journey">
@@ -232,7 +275,6 @@
           <li class="rv d2"><b>2026</b><strong>CGPA 4.00 / 4 in Major Courses</strong>Software Engineering, DBMS, Computer Networks, Compiler, Pattern Recognition and more.</li>
           <li class="rv d2"><b>2026</b><strong>CSE Club</strong>Participated in coding contests and workshops.</li>
           <li class="rv d3"><b>2025</b><strong>Phitron</strong>Completed the Phitron programming course.</li>
-          <li class="rv d4"><b>2019</b><strong>Spoken English Certification</strong>Awarded by Speakers Council.</li>
         </ul>
       </div>
       <div class="col">
@@ -241,7 +283,6 @@
           <li class="rv d1"><b>2023 – Present</b><strong>PCIU Computer Club</strong>Dedicated member supporting projects, workshops and events.</li>
           <li class="rv d2"><b>2019 – Present</b><strong>Teaching</strong>Peer-to-peer teaching for school and college students.</li>
           <li class="rv d3"><b>2021</b><strong>Campus Ambassador</strong>Promoted educational programs and connected students with learning opportunities.</li>
-          <li class="rv d4"><b>2019</b><strong>Speakers Council — MUN Workshop</strong>Introduction to Model United Nations.</li>
         </ul>
       </div>
     </div>
@@ -263,18 +304,21 @@
       <h2 class="wide rv">Let's<br>Talk<sup>°</sup></h2>
       <p class="rv d1 lead">Looking for an SQA intern or junior QA engineer who tests thoroughly and reports clearly? Send a message — it lands straight in my inbox.</p>
       <a class="mail rv d2" href="mailto:hossainshihab2001@gmail.com">hossainshihab2001@gmail.com ↗</a>
+      <p class="rv d3"><a class="btn ghost cv-btn" href="assets/Shihab-Hossain-CV.pdf" download>Download CV (PDF) ↓</a></p>
     </div>
     <form class="form rv d2" id="contactForm" novalidate>
-      <label>Your name<input name="name" required maxlength="100" autocomplete="name"></label>
+      <label>Your name<input name="name" type="text" required maxlength="100" autocomplete="name"></label>
       <label>Email<input name="email" type="email" required maxlength="200" autocomplete="email"></label>
       <label>Message<textarea name="message" rows="5" required maxlength="5000"></textarea></label>
-      <input name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <input name="website" type="text" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
       <button class="btn primary" type="submit" id="sendBtn">Send message</button>
       <p class="status" id="formStatus" role="status"></p>
     </form>
   </div>
-  <div class="foot"><span>© <span id="year">2026</span> Shihab Hossain</span><span>Built with Claude · VS Code · Vercel · Render</span></div>
+  <div class="foot"><span>© <span id="year">2026</span> Shihab Hossain</span><a class="qa-badge" href="https://github.com/shihab-hossain1/shihab-portfolio/actions/workflows/portfolio-tests.yml" target="_blank" rel="noopener" title="This site is tested automatically on every change"><img src="https://github.com/shihab-hossain1/shihab-portfolio/actions/workflows/portfolio-tests.yml/badge.svg?branch=main" alt="Portfolio tests status" height="20"></a></div>
 </section>
+
+</main>
 
 <nav class="dots" id="dots" aria-label="Sections"></nav>
 
